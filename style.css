@@ -1,0 +1,313 @@
+/* #### Gradients
+
+These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
+
+- Light Magenta: hsl(293, 100%, 63%)
+- Light Violet: hsl(264, 100%, 61%)
+
+### Secondary
+
+- White: hsl(0, 0%, 100%)
+- Light Grayish Violet (app background): hsl(270, 20%, 96%)
+- Very Dark Desaturated Violet (submit button background): hsl(271, 36%, 24%)
+- Very Light Magenta (radio button outline): hsl(289, 100%, 72%) */
+
+* {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(270, 20%, 96%);
+  overflow: hidden;
+}
+
+/* BACKGROUND */
+
+#background1 {
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  border-radius: 0 0 1000px 1000px;
+  position: absolute;
+  left: -200px;
+  top: -15%;
+  z-index: -1;
+}
+
+#background2 {
+  width: 40%;
+  height: 100%;
+  background-color: rgb(238, 220, 255);
+  border-radius: 1000px 1000px 0 0;
+  position: absolute;
+  right: -200px;
+  bottom: -15%;
+  z-index: -1;
+}
+
+/* MAIN  */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* PHONE */
+
+#phone {
+  background-color: hsl(270, 20%, 96%);
+  width: 300px;
+  height: 600px;
+  border-radius: 40px;
+  border: 1rem solid white;
+  overflow: hidden;
+  box-shadow: 0px 10px 10px  rgb(202, 202, 202);
+}
+
+.shap1 {
+  width: 125px;
+  height: 30px;
+  background-color: white;
+  border-radius: 100px;
+  grid-row: 1;
+  margin-top: -15px;
+  margin-left: 58px;
+}
+
+.top {
+  background: linear-gradient(
+    to left,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  display: grid;
+  grid-template-columns: 10% 20% 60% 10%;
+  grid-template-rows: 1fr 1fr;
+  padding: 1rem;
+  padding-top: .2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 50px rgb(155, 155, 155);
+}
+
+.arrow {
+  margin: auto 0;
+  grid-row: 2;
+}
+
+.arrowTop {
+  width: 10px;
+  height: 3px;
+  background-color: white;
+  border-radius: 20px;
+  transform: rotate(-60deg);
+  transform-origin: left;
+}
+
+.arrowBot {
+  width: 10px;
+  height: 3px;
+  background-color: white;
+  border-radius: 20px;
+  transform: rotate(60deg);
+  transform-origin: left;
+  margin-top: -5px;
+}
+
+.top img {
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: auto 0;
+  grid-row: 2;
+}
+
+.name {
+  margin: auto 0;
+  grid-row: 2;
+}
+
+.name h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.name h3 {
+  color: white;
+  font-size: 0.5rem;
+}
+
+.dots {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  grid-row: 2;
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 2px;
+}
+
+/* MID  */
+
+.mid {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 90%;
+}
+
+.me {
+  background-color: hsla(276, 55%, 52%, 0.1);
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  width: 70%;
+  border-radius: 10px 10px 10px 2px;
+  color: hsl(276, 55%, 52%);
+  box-shadow: 0px 2px 2px rgb(187, 187, 187);
+}
+
+.pictures {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pictures img {
+  width: 50px;
+  border-radius: 5px;
+  margin-left: 0.2rem;
+}
+
+.you {
+  background-color: white;
+  align-self: flex-end;
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  width: 70%;
+  border-radius: 10px 10px 2px 10px;
+  color: hsl(271, 15%, 43%);
+  box-shadow: 0px 2px 2px rgb(187, 187, 187);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    to right,
+    hsl(293, 100%, 63%),
+    hsl(264, 100%, 61%)
+  );
+  padding: 0.8rem;
+  width: 80%;
+  border-radius: 10px 10px 10px 2px;
+  color: hsl(0, 0%, 91%);
+  box-shadow: 0px 2px 2px rgb(187, 187, 187);
+}
+
+.price-left {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border: 1px solid hsl(0, 0%, 91%);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.price p {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.price h2 {
+  font-weight: 700;
+}
+
+.type {
+  background-color: white;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+  box-shadow: 0px 2px 2px rgb(187, 187, 187);
+}
+
+.type p {
+  font-size: 0.8rem;
+  color: rgb(179, 179, 179);
+  margin-left: 1rem;
+}
+
+.typeArrow {
+  background-color: hsl(271, 36%, 24%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 2px 2px rgb(187, 187, 187);
+}
+
+.typeArrow .arrowTop {
+  width: 12px;
+  height: 3px;
+  background-color: white;
+  border-radius: 20px 0 0 20px;
+  transform: rotate(45deg);
+  transform-origin: right;
+}
+
+.typeArrow .arrowBot {
+  width: 12px;
+  height: 3px;
+  background-color: white;
+  border-radius: 20px 0 0 20px;
+  transform: rotate(-45deg);
+  transform-origin: right;
+  margin-top: -5px;
+}
+
+/* TEXTE  */
+
+.text {
+  margin: auto 0;
+}
+
+.text h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(271, 67%, 28%);
+  margin-bottom: 1rem;
+}
+
+.text h2 {
+  color: hsl(271, 15%, 43%);
+  line-height: 1.5rem;
+}
